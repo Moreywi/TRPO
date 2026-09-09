@@ -11,7 +11,15 @@ w_back = 60;
 h_back = 35;
 thickness_back = 1;
 
-walls();
+kit_frame();
+
+module kit_frame() {
+    bottom();
+    color("red")
+    translate([0, 0, h_walls/2+thickness_back/2])
+    walls();
+}
+
 
 module walls(){
     difference(){
@@ -25,7 +33,10 @@ module walls(){
 //translate([0, 0, 3]);
 //backlight()
 
-module bottom() {}
+module bottom() {
+    cube([w_back+2*thickness_walls, h_back+2*thickness_walls, thickness_bottom], center=true);
+}
+
 
 module backlight() {
   color("lightgreen")
