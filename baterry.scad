@@ -1,3 +1,5 @@
+use <18650.scad>
+
 echo("Работа Воробьева Савелия");
 w_frame = 65;
 d_frame = 5;
@@ -12,6 +14,7 @@ h_back = 35;
 thickness_back = 1;
 
 kit_frame();
+acc18650();
 
 module kit_frame() {
     bottom();
